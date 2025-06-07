@@ -1,82 +1,78 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=National+Park:wght@200..800&family=Playwrite+AU+SA:wght@100..400&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     box-sizing: border-box;
+
+}
+:root{
+    --primary: #e35f21;
+    --dark: #010506;
+    --secondary: #eef8f7;
 }
 
+body{
+    background-color: var(--dark);
+    color: var(--secondary);
+    font-family: Montserrat;
+}
 header{
     display: flex;
-    justify-content: center;
-    gap: 2rem;
     padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 3px 3px 1px #333;
+}
+.card{
+    background-color: #010506;
+    box-shadow: 1px 3px 3px 1px #333;
+    border-radius: 15px;
+    padding: 1.25rem 1rem;
+    flex: 1;
+    min-width: 400px;
 }
 
-button{
-    border: none;
-    background-color: #2f7bf5;
-    color: white;
-    padding: 5px;
-    font-size: 1.25rem;
+.main{
+    margin: 2rem 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-button:hover{
-    background-color: #064dbf;
+.todo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: .25rem .5rem;
+    align-items: center;
 }
-
-.container{
+.todo-details{
     display: flex;
     align-items: center;
-    padding: 2rem;
-    background-image: url("./turkish.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 90vh;
+    gap: .5rem;
+}
+.todo-details input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
    
 }
-
-.text-content{
-    padding: 1rem;
-    width: 100%;
-    backdrop-filter: grayscale(40%);
-    height: 100%;
-    color: white;
-    
+p.todo-text{
+    margin: 0;
 }
-.text-content h1{
-    font-size: clamp(3rem,5vw,5rem);
-    margin: .5rem 0rem;
-}
-
-.menu{
-    display: flex;
-    padding: 2rem;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.menu-item{
-    background-color: #2f7bf5;
-    color: white;
-    border: 1px solid gray;
-    padding: .5rem;
-    min-width: 250px;
+.todo-text{
     display: flex;
     flex-direction: column;
+   
 }
-.menu .ingredients, .menu ul{
-    margin: 0 auto;
-}
-.menu .price{
-    margin-left: auto;
+.todo-text small {
+    font-size: 10px;
 }
 
-.contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #2f7bf5;
-    color: white;
-    padding: 2rem;
 
+.hidden{
+    display: none;
 }
-
-.btn-active{
-    background-color: #064dbf;
+.barred{
+    text-decoration: line-through;
+}
+.text-disabled{
+    color: #888;
 }

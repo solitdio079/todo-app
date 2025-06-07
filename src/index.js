@@ -1,31 +1,19 @@
+import Todo from "./todo";
+import Project from "./projects";
 import "./style.css"
-import homePage from "./home"
-import menuPage from "./menu"
-import contactPage from "./contact"
-const menuBtn = document.querySelector("#menu")
-const homeBtn = document.querySelector("#home")
-const contactBtn = document.querySelector("#contact")
-const allBtn = [...document.querySelectorAll("nav button")]
-console.log("My webpack app!")
+const myTodos = []
+const myProjects = []
 
-homePage()
-homeBtn.classList.add("btn-active")
-//menuPage()
-//contactPage()
 
-menuBtn.addEventListener("click", (e) => {
-    allBtn.forEach(btn => btn.classList.remove("btn-active"))
-    menuBtn.classList.add("btn-active")
-    menuPage()
-})
-homeBtn.addEventListener("click", (e) => {
-    allBtn.forEach(btn => btn.classList.remove("btn-active"))
-    homeBtn.classList.add("btn-active")
-    homePage()
-})
+const defaultProject = new Project("Personal")
+const defaultProjectName = defaultProject.getName()
+const todo1 = new Todo("Create Todo", defaultProjectName)
 
-contactBtn.addEventListener("click", (e) => {
-    allBtn.forEach(btn => btn.classList.remove("btn-active"))
-    contactBtn.classList.add("btn-active")
-    contactPage()
-})
+
+
+myTodos.push(todo1)
+myProjects.push(defaultProject)
+
+//todo1.complete= true
+console.log(myTodos)
+console.log(defaultProject)
