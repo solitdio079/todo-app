@@ -8,11 +8,11 @@
     --primary: #e35f21;
     --dark: #010506;
     --secondary: #eef8f7;
-    --priority-1: rgba(246, 216, 216, 0.3);
-    --priority-2:rgba(254, 141, 141, 0.3);
-    --priority-3: rgba(245, 85, 85, 0.3);
-    --priority-4: rgba(249, 49, 49, 0.3);
-    --priority-5: rgba(240, 0, 0, 0.3);
+    --priority-1: rgba(0, 255, 238, 0.5);
+    --priority-2:rgba(6, 213, 161, 0.5);
+    --priority-3: rgba(8, 230, 78, 0.5);
+    --priority-4: rgba(241, 219, 12, 0.5);
+    --priority-5: rgba(240, 0, 0, 0.5);
 }
 
 body{
@@ -92,7 +92,7 @@ p.todo-text{
     flex-direction: column;
     gap: 1rem;
 }
-.edit-form input#title{
+.edit-form input#editTitle{
     font-size: 2rem;
     color: var(--secondary);
     background-color: transparent;
@@ -114,7 +114,7 @@ p.todo-text{
     color: var(--secondary);
 
 }
-.lower-three select{
+.lower-three select, #editProject{
     background-color: transparent;
     color: var(--secondary);
     border: none;
@@ -156,18 +156,32 @@ input[type="date"]{
     border: none;
     font-size: 1.5rem;
 }
-#addProjectBtn{
+#addProjectBtn, #deleteProjectBtn{
     background-color: transparent;
     border: none;
     color: var(--secondary);
     cursor: pointer;
 
 }
-#addProjectBtn:hover{
+#addProjectBtn:hover,#deleteProjectBtn:hover{
     background-color: #333;
 }
 svg {
     fill: var(--secondary);
+}
+
+.todo-details-headers{
+    display: flex;
+    justify-content: space-between;
+}
+#deleteTodoBtn{
+    background-color: transparent;
+   
+    border: none;
+    cursor: pointer;
+}
+#deleteTodoBtn svg{
+    fill: var(--primary);
 }
 
 .addProject-dialog{
@@ -222,4 +236,20 @@ svg {
 ::backdrop {
   background-color: #222;
     opacity: 0.75;
+  }
+
+  .priority-1{
+    background-color: var(--priority-1);
+  }
+  .priority-2{
+    background-color: var(--priority-2);
+  }
+  .priority-3{
+    background-color: var(--priority-3);
+  }
+  .priority-4{
+    background-color: var(--priority-4);
+  }
+  .priority-5{
+    background-color: var(--priority-5);
   }

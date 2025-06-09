@@ -141,6 +141,9 @@
            
            
           </dialog>
+          <button id="deleteProjectBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </button>
           <button id="addProjectBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,17 +189,21 @@
       </div>
 
       <div class="card">
-        <h6>Personal</h6>
+        <div class="todo-details-headers">
+          <h6>Todo Details</h6>
+          <button id="deleteTodoBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </button>
+        </div> 
         <form class="edit-form">
-          <input type="text" name="title" id="title" value="Todo Title" />
+          <input type="text" name="title" id="editTitle" value="Todo Title" />
           <div class="lower-three">
-            <input type="date" name="dueDate" id="dueDate" />
-            <select name="project" id="project">
-              <option value="Personal">Personal</option>
-              <option value="Work">Work</option>
+            <input type="date" name="dueDate" id="editDueDate" />
+            <select name="project" id="editProject">
+             
             </select>
 
-            <select name="priority" id="priority">
+            <select name="priority" id="editPriority">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -211,12 +218,12 @@
               type="text"
               name="notes"
               placeholder="Insert your notes here"
+              id="editNotes"
             />
           </div>
         </form>
       </div>
     </div>
 
-    <div class="content"></div>
   </body>
 </html>
